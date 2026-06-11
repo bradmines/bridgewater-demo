@@ -28,17 +28,19 @@
 .photoWrap {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
+  height: 420px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 0 6px rgba(26,150,150,0.08);
 }
 
 .photo {
   width: 100%;
-  aspect-ratio: 4/5;
+  height: 100%;
   object-fit: cover;
-  object-position: center 12%;
-  border-radius: var(--radius-xl);
+  object-position: center 8%;
   display: block;
-  box-shadow: var(--shadow-lg), 0 0 0 6px rgba(26,150,150,0.08);
   transition: transform 600ms ease;
 }
 
@@ -49,7 +51,6 @@
 .photoOverlay {
   position: absolute;
   inset: 0;
-  border-radius: var(--radius-xl);
   background: linear-gradient(to bottom, transparent 50%, rgba(10,64,64,0.35) 100%);
   pointer-events: none;
 }

@@ -16,7 +16,7 @@ const SERVICES = [
 ]
 
 export default function BookingForm() {
-  const [form, setForm] = useState({ name: '', phone: '', day: '', service: '', message: '' })
+  const [form, setForm] = useState({ name: '', phone: '', email: '', day: '', service: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState({})
 
@@ -94,7 +94,7 @@ export default function BookingForm() {
                   Thanks, <strong>{form.name.split(' ')[0]}</strong>! We'll call you at{' '}
                   <strong>{form.phone}</strong> within one business day to confirm your appointment.
                 </p>
-                <button className="btn btn-outline" onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', day: '', service: '', message: '' }) }}>
+                <button className="btn btn-outline" onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', email: '', day: '', service: '', message: '' }) }}>
                   Submit another request
                 </button>
               </div>
@@ -130,6 +130,19 @@ export default function BookingForm() {
                     />
                     {errors.phone && <span className={styles.errorMsg} role="alert">{errors.phone}</span>}
                   </div>
+                </div>
+
+                <div className={styles.field}>
+                  <label htmlFor="book-email" className={styles.label}>Email Address (optional)</label>
+                  <input
+                    id="book-email"
+                    type="email"
+                    className={styles.input}
+                    placeholder="jane@example.com"
+                    value={form.email}
+                    onChange={handleChange('email')}
+                    autoComplete="email"
+                  />
                 </div>
 
                 <div className={styles.row}>
