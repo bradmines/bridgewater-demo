@@ -1,0 +1,221 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.scrolled {
+  border-bottom-color: var(--gray-200);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: var(--teal-700);
+  transition: color var(--transition);
+}
+
+.logo:hover {
+  color: var(--teal-600);
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logoMain {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--gray-900);
+}
+
+.logoDental {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-600);
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+@media (min-width: 900px) {
+  .nav {
+    display: flex;
+  }
+}
+
+.navLink {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.navLink:hover {
+  color: var(--teal-700);
+  background: var(--teal-50);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+@media (min-width: 900px) {
+  .right {
+    margin-left: 16px;
+  }
+}
+
+.phone {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  transition: color var(--transition);
+}
+
+@media (min-width: 600px) {
+  .phone {
+    display: flex;
+  }
+}
+
+.phone:hover {
+  color: var(--teal-700);
+}
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: none;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .menuBtn {
+    display: none;
+  }
+}
+
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  display: block;
+  background: var(--gray-800);
+  height: 2px;
+  width: 20px;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.menuIcon {
+  position: relative;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.menuIcon::before { top: -6px; }
+.menuIcon::after  { top: 6px; }
+
+.menuOpen {
+  background: transparent;
+}
+
+.menuOpen::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menuOpen::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Mobile drawer */
+.drawer {
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+  padding: 16px 20px 24px;
+}
+
+@media (min-width: 900px) {
+  .drawer {
+    display: none;
+  }
+}
+
+.drawerLink {
+  display: block;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray-800);
+  border-bottom: 1px solid var(--gray-100);
+  transition: color var(--transition);
+}
+
+.drawerLink:hover {
+  color: var(--teal-700);
+}
+
+.drawerPhone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0 8px;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.drawerBook {
+  margin-top: 16px;
+  width: 100%;
+  justify-content: center;
+}

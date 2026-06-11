@@ -1,0 +1,227 @@
+.section {
+  padding: 96px 0;
+  background: var(--white);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .inner {
+    grid-template-columns: 1fr 420px;
+    gap: 56px;
+    align-items: stretch;
+  }
+}
+
+/* Map */
+.mapWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mapPlaceholder {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+}
+
+@media (min-width: 960px) {
+  .mapPlaceholder {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 400px;
+  }
+}
+
+.mapGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mapCell {
+  border-right: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.mapCell:nth-child(3n) { background: var(--gray-200); }
+.mapCell:nth-child(7n) { background: rgba(26,150,150,0.06); }
+
+.mapPin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--teal-600);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.mapPinLabel {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+}
+
+.mapNote {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  font-style: italic;
+  text-align: center;
+}
+
+/* Info column */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-600);
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 3px;
+}
+
+.infoValue {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--gray-800);
+  line-height: 1.5;
+}
+
+.infoLink {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--teal-700);
+  transition: color var(--transition);
+}
+
+.infoLink:hover {
+  color: var(--teal-600);
+}
+
+/* Hours */
+.hoursCard {
+  padding: 20px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+}
+
+.hoursTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 14px;
+}
+
+.hoursTitle svg {
+  color: var(--teal-500);
+}
+
+.hoursList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.hoursToday {
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+}
+
+.hoursDay {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.todayBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--teal-600);
+  color: var(--white);
+  padding: 2px 6px;
+  border-radius: 100px;
+}
+
+.hoursTime {
+  color: var(--gray-600);
+  font-weight: 400;
+}
+
+.hoursClosed {
+  color: var(--gray-400);
+}

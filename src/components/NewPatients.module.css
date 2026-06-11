@@ -1,0 +1,173 @@
+.section {
+  padding: 96px 0;
+  background: var(--teal-50);
+  border-top: 1px solid var(--teal-100);
+  border-bottom: 1px solid var(--teal-100);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .inner {
+    grid-template-columns: 420px 1fr;
+    gap: 72px;
+  }
+}
+
+/* Photo column */
+.photoCol {
+  display: flex;
+  justify-content: center;
+}
+
+.photoWrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: var(--radius-xl);
+  display: block;
+  box-shadow: var(--shadow-lg), 0 0 0 6px rgba(26,150,150,0.08);
+  transition: transform 600ms ease;
+}
+
+.photoWrap:hover .photo {
+  transform: scale(1.02);
+}
+
+.photoOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(to bottom, transparent 50%, rgba(10,64,64,0.35) 100%);
+  pointer-events: none;
+}
+
+.photoBadge {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--teal-800);
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+}
+
+.photoBadge svg {
+  color: var(--teal-600);
+}
+
+/* Content column */
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin: 16px 0 28px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.feature {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.featureCheck {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--teal-600);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.featureTitle {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gray-900);
+  margin-bottom: 3px;
+}
+
+.featureDesc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+}
+
+/* Insurance card */
+.insuranceCard {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.insuranceLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 12px;
+}
+
+.insuranceGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.insurancePill {
+  padding: 4px 11px;
+  background: var(--teal-50);
+  border: 1px solid var(--teal-100);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--teal-800);
+}
+
+.insuranceNote {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  font-style: italic;
+}
