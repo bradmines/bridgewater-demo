@@ -9,7 +9,7 @@ export default function Doctor() {
             <div className={styles.photoWrap}>
               <div className={styles.photoFrame}>
                 <img
-                  src="/99dd62be-c4ab-493e-94b7-dd2e9bf18f35.jpg"
+                  src={`${import.meta.env.BASE_URL}99dd62be-c4ab-493e-94b7-dd2e9bf18f35.jpg`}
                   alt="Dr. Sarah Bridgewater, DDS — smiling in her St. Catharines dental office"
                   className={styles.photo}
                   width="967"

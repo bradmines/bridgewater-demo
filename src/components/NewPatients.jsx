@@ -15,7 +15,7 @@ export default function NewPatients() {
           <div className={styles.photoCol}>
             <div className={styles.photoWrap}>
               <img
-                src="/beebd40f-f286-40e8-b138-d5d1f0ede62a.jpg"
+                src={`${import.meta.env.BASE_URL}beebd40f-f286-40e8-b138-d5d1f0ede62a.jpg`}
                 alt="A Bridgewater Dental dentist in a modern, welcoming operatory"
                 className={styles.photo}
                 width="967"

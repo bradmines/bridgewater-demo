@@ -16,8 +16,8 @@ const SERVICES = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
       </svg>
     ),
-    title: 'Cosmetic Dentistry',
-    desc: 'Veneers, bonding, and smile makeovers designed to bring out the best in your natural smile.',
+    title: 'Porcelain Veneers',
+    desc: 'Ultra-thin, custom-crafted veneers that instantly correct chips, gaps, and discolouration for a picture-perfect smile.',
   },
   {
     icon: (
@@ -40,6 +40,24 @@ const SERVICES = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+    ),
+    title: 'Crowns & Bridges',
+    desc: 'Durable, tooth-coloured crowns and bridges that restore damaged or missing teeth to full strength and natural appearance.',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.02 12.02l.707.707M1 12h1m18 0h1M4.22 19.78l.707-.707M18.364 5.636l.707-.707M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+      </svg>
+    ),
+    title: 'Teeth Whitening',
+    desc: 'Professional in-office and take-home whitening options for a brilliantly brighter smile, safely and comfortably.',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
       </svg>
     ),
@@ -50,11 +68,11 @@ const SERVICES = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707m12.02 12.02l.707.707M1 12h1m18 0h1M4.22 19.78l.707-.707M18.364 5.636l.707-.707M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
       </svg>
     ),
-    title: 'Teeth Whitening',
-    desc: 'Professional in-office and take-home whitening options for a brilliantly brighter smile, safely and comfortably.',
+    title: 'Wisdom Teeth Removal',
+    desc: 'Comfortable, efficient wisdom tooth extractions performed with precision — so you recover quickly and get on with life.',
   },
 ]
 

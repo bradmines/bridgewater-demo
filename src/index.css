@@ -181,4 +181,6 @@ a:focus-visible {
   color: var(--gray-600);
   line-height: 1.7;
   max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
 }

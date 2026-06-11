@@ -69,7 +69,7 @@ export default function Hero() {
         <div className={styles.visual}>
           <div className={styles.imageWrap}>
             <img
-              src="/2e3c8b62-4039-4278-81ee-9d022c79b8a3.jpg"
+              src={`${import.meta.env.BASE_URL}2e3c8b62-4039-4278-81ee-9d022c79b8a3.jpg`}
               alt="Bridgewater Dental's modern operatory — bright, spa-like treatment room with floor-to-ceiling windows and a teal dental chair"
               className={styles.heroImage}
               width="960"
